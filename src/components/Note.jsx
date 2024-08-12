@@ -55,7 +55,9 @@ function Note({ title, content, deleteNote, id }) {
     setBgColor(actionName);
   }
 
-  console.log(bgColor);
+  function resetBgColor() {
+    setBgColor(null);
+  }
 
   return (
     <div className="note" style={{ backgroundColor: bgColor }}>
@@ -82,6 +84,11 @@ function Note({ title, content, deleteNote, id }) {
                   onClick={() => changeBg(action.name)}
                 />
               ))}
+              <SpeedDialAction
+                icon={<DescriptionIcon />}
+                tooltipTitle="Reset"
+                onClick={resetBgColor}
+              />
             </StyledSpeedDial>
           </Box>
         </Box>
