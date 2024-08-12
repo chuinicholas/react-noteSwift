@@ -110,3 +110,18 @@ form.create-note button {
 .addBtn:hover {
   color: #484848;
 }
+
+@media only screen and (max-width: 768px) {
+  .note {
+    width: 100%; /* Adjust width for mobile */
+    margin: 16px 0; /* Adjust margin */
+  }
+
+  form.create-note {
+    width: 100%; /* Adjust width for mobile */
+  }
+
+  form.create-note button {
+    position: static; /* Reset position */
+  }
+}
